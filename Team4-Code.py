@@ -40,7 +40,11 @@ try:
     
     #writes to the the file "BinOutput.txt"
     code_output.write(str(bits) + "." + result)
+except KeyError:
+    print("Unknown symbol in code you are trying to encode")
 except:
-    #if it errors, it tells the user that they inputed the wrong file
+    #if it errors and it is not a key error, 
+    #it tells the user that they inputed the wrong file
+    #since it errored when trying to open the file
     print("No file named that.")
 
