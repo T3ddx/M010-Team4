@@ -41,6 +41,8 @@ try:
     #writes to the the file "BinOutput.txt"
     code_output.write(str(bits) + "." + result)
 except KeyError:
+    #if a key error occurs then the symbol is not in
+    #the dictionary so it lets the user know
     print("Unknown symbol in code you are trying to encode")
 except:
     #if it errors and it is not a key error, 
